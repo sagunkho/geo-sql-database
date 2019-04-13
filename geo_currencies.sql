@@ -9,13 +9,13 @@ CREATE TABLE `geo_currencies` (
 	`code` varchar(5) NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`major_name` varchar(255) NOT NULL DEFAULT '',
-	`major_symbol` varchar(10) NOT NULL DEFAULT '',
+	`major_symbol` varchar(50) NOT NULL DEFAULT '',
 	`minor_name` varchar(255) NOT NULL DEFAULT '',
 	`minor_symbol` varchar(10) NOT NULL DEFAULT '',
 	`minor_value` decimal(25, 6) NOT NULL DEFAULT 0.0,
 	`created_at` datetime DEFAULT NULL,
 	`updated_at` datetime DEFAULT NULL,
-	PRIMARY KEY (`id`),
+	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 

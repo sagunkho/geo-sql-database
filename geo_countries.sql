@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS `geo_countries`;
 CREATE TABLE `geo_countries` (
 	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 	`name` varchar(255) NOT NULL,
-	`cca2` varchar(2) NOT NULL,
+	`cca2` varchar(3) NOT NULL,
 	`cca3` varchar(3) NOT NULL,
 	`ccn3` int(11) NOT NULL,
 	`continent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,

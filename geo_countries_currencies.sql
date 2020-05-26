@@ -6,13 +6,13 @@
 DROP TABLE IF EXISTS `geo_countries_currencies`;
 CREATE TABLE `geo_countries_currencies` (
 	`country_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`currency_id` int(10) NOT NULL,
+	`currency_id`  int(11) unsigned NOT NULL,
 	PRIMARY KEY (`country_id`, `currency_id`),
+	KEY `geo_countries_currencies_country_id_foreign` (`country_id`),
+        KEY `geo_countries_currencies_currency_id_foreign` (`currency_id`),
 	CONSTRAINT `geo_countries_currencies_country_id_foreign` FOREIGN KEY (`country_id`) REFERENCES `geo_countries` (`id`),
-	KEY `geo_countries_currencies_currency_id_foreign` (`currency_id`),
 	CONSTRAINT `geo_countries_currencies_currency_id_foreign` FOREIGN KEY (`currency_id`) REFERENCES `geo_currencies` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 INSERT INTO `geo_countries_currencies` (`country_id`, `currency_id`) VALUES 
 (1, 1),

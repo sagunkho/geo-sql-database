@@ -1,3 +1,11 @@
+DROP TABLE IF EXISTS `geo_zones`;
+CREATE TABLE `geo_zones` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `cca2` varchar(3) NOT NULL,
+	`name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 INSERT INTO `geo_zones` VALUES 
 (1,'AD','Europe/Andorra'),
 (2,'AE','Asia/Dubai'),
